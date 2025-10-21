@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PengSijehtra - Wujudkan Keuangan Sehat</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="assets/logo-pengsijehtra.png" alt="PengSijehtra Logo">
+                <span>PengSijehtra</span>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="konsultasi.html">Konsultasi</a>
+                <a href="about.html" class="active">Tentang Kami</a>
+                <a href="#education">Edukasi</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home-section">
+            <div class="container">
+                <h1>Wujudkan Keuangan Yang Sehat, Raih Masa Depan Impianmu</h1>
+                <p>Solusi finansial modern untuk generasi muda Indonesia. Lakukan financial check-up dan dapatkan panduan dari asisten AI kami.</p>
+                <button id="start-test-btn" class="cta-button">Mulai Tes Finansial</button>
+            </div>
+        </section>
+
+        <section id="questionnaire-section">
+            <div class="container">
+                <div class="question-card">
+                    <div id="question-content"></div>
+                    <div class="progress-bar">
+                        <div id="progress-bar-fill"></div>
+                    </div>
+                    <div class="navigation-buttons">
+                        <button id="cancel-btn" class="cancel-button">Batalkan Tes</button>
+                        <div class="nav-right">
+                           <button id="prev-btn" class="secondary-button">Sebelumnya</button>
+                           <button id="next-btn" class="cta-button">Selanjutnya</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="result-section">
+            <div class="container result-container">
+                <h2>Hi, Pengguna! Hasil Analisismu Sudah Jadi</h2>
+                <div class="result-summary">
+                    <div class="score-circle">
+                        <span id="financial-score">0</span>
+                        <p>Skor Finansial</p>
+                    </div>
+                    <div class="result-text">
+                        <h3>Kondisi Keuangan: <span id="financial-classification"></span></h3>
+                        <p id="financial-recommendation"></p>
+                    </div>
+                </div>
+                <div class="result-details">
+                    <h4>Rincian Analisis:</h4>
+                    <ul>
+                        <li>Rasio Tabungan: <strong id="saving-ratio">0%</strong></li>
+                        <li>Rasio Utang terhadap Pendapatan: <strong id="debt-ratio">0%</strong></li>
+                        <li>Dana Darurat: <strong id="emergency-fund-status">-</strong></li>
+                    </ul>
+                </div>
+                <button onclick="showHome(true)" class="cta-button">Ulangi Tes</button>
+            </div>
+        </section>
+    </main>
+    
+    <div id="confirm-modal-backdrop" class="modal-backdrop hidden">
+        <div id="confirm-modal" class="modal-content">
+            <div class="modal-header">
+                <h3>Keluar dari Tes?</h3>
+            </div>
+            <div class="modal-body">
+                <p>Apakah Anda yakin ingin meninggalkan halaman ini? Semua progres yang telah diisi akan hilang.</p>
+            </div>
+            <div class="modal-footer">
+                <button id="modal-btn-no" class="secondary-button">Tidak</button>
+                <button id="modal-btn-yes" class="danger-button">Ya, Keluar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
