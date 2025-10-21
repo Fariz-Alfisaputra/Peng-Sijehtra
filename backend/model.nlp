@@ -1,0 +1,941 @@
+{
+  "settings": {
+    "languages": [
+      "id"
+    ],
+    "forceNER": true,
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "id"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "id": {
+        "settings": {
+          "locale": "id",
+          "trainByDomain": false,
+          "tag": "domain-manager-id",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "halo": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "hai": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "pagi,selamat": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "ima,kasih": {
+            "intent": "greetings.thanks",
+            "domain": "default"
+          },
+          "makasih,ya": {
+            "intent": "greetings.thanks",
+            "domain": "default"
+          },
+          "jumpa,sampa": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "dadah": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "apa,dana,darurat,itu": {
+            "intent": "about.emergency_fund",
+            "domain": "default"
+          },
+          "dana,darurat,jelas,tentang": {
+            "intent": "about.emergency_fund",
+            "domain": "default"
+          },
+          "apa,dana,darurat,ideal,yang": {
+            "intent": "about.emergency_fund",
+            "domain": "default"
+          },
+          "bagaimana,cara,investasi": {
+            "intent": "about.investment",
+            "domain": "default"
+          },
+          "investasi,pula,untuk": {
+            "intent": "about.investment",
+            "domain": "default"
+          },
+          "investasi,jelas,tentang": {
+            "intent": "about.investment",
+            "domain": "default"
+          },
+          "atasi,cara,utang": {
+            "intent": "about.debt",
+            "domain": "default"
+          },
+          "apa,itu,produktif,utang": {
+            "intent": "about.debt",
+            "domain": "default"
+          },
+          "bagaimana,cicil,elola": {
+            "intent": "about.debt",
+            "domain": "default"
+          },
+          "anggar,buat,cara": {
+            "intent": "about.budget",
+            "domain": "default"
+          },
+          "20,30,50,apa,itu,tode": {
+            "intent": "about.budget",
+            "domain": "default"
+          },
+          "bagaimana,cara,hemat": {
+            "intent": "about.budget",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "greetings.hello": "default",
+          "greetings.thanks": "default",
+          "greetings.bye": "default",
+          "about.emergency_fund": "default",
+          "about.investment": "default",
+          "about.debt": "default",
+          "about.budget": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "halo",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "hai",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "selamat pagi",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "terima kasih",
+            "intent": "greetings.thanks"
+          },
+          {
+            "domain": "default",
+            "utterance": "makasih ya",
+            "intent": "greetings.thanks"
+          },
+          {
+            "domain": "default",
+            "utterance": "sampai jumpa",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "dadah",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "apa itu dana darurat",
+            "intent": "about.emergency_fund"
+          },
+          {
+            "domain": "default",
+            "utterance": "jelaskan tentang dana darurat",
+            "intent": "about.emergency_fund"
+          },
+          {
+            "domain": "default",
+            "utterance": "berapa dana darurat yang ideal",
+            "intent": "about.emergency_fund"
+          },
+          {
+            "domain": "default",
+            "utterance": "bagaimana cara investasi",
+            "intent": "about.investment"
+          },
+          {
+            "domain": "default",
+            "utterance": "investasi untuk pemula",
+            "intent": "about.investment"
+          },
+          {
+            "domain": "default",
+            "utterance": "jelaskan tentang investasi",
+            "intent": "about.investment"
+          },
+          {
+            "domain": "default",
+            "utterance": "cara mengatasi utang",
+            "intent": "about.debt"
+          },
+          {
+            "domain": "default",
+            "utterance": "apa itu utang produktif",
+            "intent": "about.debt"
+          },
+          {
+            "domain": "default",
+            "utterance": "bagaimana mengelola cicilan",
+            "intent": "about.debt"
+          },
+          {
+            "domain": "default",
+            "utterance": "cara membuat anggaran",
+            "intent": "about.budget"
+          },
+          {
+            "domain": "default",
+            "utterance": "apa itu metode 50/30/20",
+            "intent": "about.budget"
+          },
+          {
+            "domain": "default",
+            "utterance": "bagaimana cara menghemat",
+            "intent": "about.budget"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "id",
+              "tag": "nlu-id",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "20": 1,
+              "30": 1,
+              "50": 1,
+              "halo": 1,
+              "hai": 1,
+              "selamat": 1,
+              "pagi": 1,
+              "ima": 1,
+              "kasih": 1,
+              "makasih": 1,
+              "ya": 1,
+              "sampa": 1,
+              "jumpa": 1,
+              "dadah": 1,
+              "apa": 1,
+              "itu": 1,
+              "dana": 1,
+              "darurat": 1,
+              "jelas": 1,
+              "tentang": 1,
+              "yang": 1,
+              "ideal": 1,
+              "bagaimana": 1,
+              "cara": 1,
+              "investasi": 1,
+              "untuk": 1,
+              "pula": 1,
+              "atasi": 1,
+              "utang": 1,
+              "produktif": 1,
+              "elola": 1,
+              "cicil": 1,
+              "buat": 1,
+              "anggar": 1,
+              "tode": 1,
+              "hemat": 1
+            },
+            "intents": {
+              "greetings.hello": 1,
+              "greetings.thanks": 1,
+              "greetings.bye": 1,
+              "about.emergency_fund": 1,
+              "about.investment": 1,
+              "about.debt": 1,
+              "about.budget": 1
+            },
+            "intentFeatures": {
+              "greetings.hello": {
+                "halo": 1,
+                "hai": 1,
+                "selamat": 1,
+                "pagi": 1
+              },
+              "greetings.thanks": {
+                "ima": 1,
+                "kasih": 1,
+                "makasih": 1,
+                "ya": 1
+              },
+              "greetings.bye": {
+                "sampa": 1,
+                "jumpa": 1,
+                "dadah": 1
+              },
+              "about.emergency_fund": {
+                "apa": 1,
+                "itu": 1,
+                "dana": 1,
+                "darurat": 1,
+                "jelas": 1,
+                "tentang": 1,
+                "yang": 1,
+                "ideal": 1
+              },
+              "about.investment": {
+                "bagaimana": 1,
+                "cara": 1,
+                "investasi": 1,
+                "untuk": 1,
+                "pula": 1,
+                "jelas": 1,
+                "tentang": 1
+              },
+              "about.debt": {
+                "cara": 1,
+                "atasi": 1,
+                "utang": 1,
+                "apa": 1,
+                "itu": 1,
+                "produktif": 1,
+                "bagaimana": 1,
+                "elola": 1,
+                "cicil": 1
+              },
+              "about.budget": {
+                "20": 1,
+                "30": 1,
+                "50": 1,
+                "cara": 1,
+                "buat": 1,
+                "anggar": 1,
+                "apa": 1,
+                "itu": 1,
+                "tode": 1,
+                "bagaimana": 1,
+                "hemat": 1
+              }
+            },
+            "featuresToIntent": {
+              "20": [
+                "about.budget"
+              ],
+              "30": [
+                "about.budget"
+              ],
+              "50": [
+                "about.budget"
+              ],
+              "halo": [
+                "greetings.hello"
+              ],
+              "hai": [
+                "greetings.hello"
+              ],
+              "selamat": [
+                "greetings.hello"
+              ],
+              "pagi": [
+                "greetings.hello"
+              ],
+              "ima": [
+                "greetings.thanks"
+              ],
+              "kasih": [
+                "greetings.thanks"
+              ],
+              "makasih": [
+                "greetings.thanks"
+              ],
+              "ya": [
+                "greetings.thanks"
+              ],
+              "sampa": [
+                "greetings.bye"
+              ],
+              "jumpa": [
+                "greetings.bye"
+              ],
+              "dadah": [
+                "greetings.bye"
+              ],
+              "apa": [
+                "about.emergency_fund",
+                "about.debt",
+                "about.budget"
+              ],
+              "itu": [
+                "about.emergency_fund",
+                "about.debt",
+                "about.budget"
+              ],
+              "dana": [
+                "about.emergency_fund"
+              ],
+              "darurat": [
+                "about.emergency_fund"
+              ],
+              "jelas": [
+                "about.emergency_fund",
+                "about.investment"
+              ],
+              "tentang": [
+                "about.emergency_fund",
+                "about.investment"
+              ],
+              "yang": [
+                "about.emergency_fund"
+              ],
+              "ideal": [
+                "about.emergency_fund"
+              ],
+              "bagaimana": [
+                "about.investment",
+                "about.debt",
+                "about.budget"
+              ],
+              "cara": [
+                "about.investment",
+                "about.debt",
+                "about.budget"
+              ],
+              "investasi": [
+                "about.investment"
+              ],
+              "untuk": [
+                "about.investment"
+              ],
+              "pula": [
+                "about.investment"
+              ],
+              "atasi": [
+                "about.debt"
+              ],
+              "utang": [
+                "about.debt"
+              ],
+              "produktif": [
+                "about.debt"
+              ],
+              "elola": [
+                "about.debt"
+              ],
+              "cicil": [
+                "about.debt"
+              ],
+              "buat": [
+                "about.budget"
+              ],
+              "anggar": [
+                "about.budget"
+              ],
+              "tode": [
+                "about.budget"
+              ],
+              "hemat": [
+                "about.budget"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "id",
+                "tag": "nlu-id",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "halo",
+                "hai",
+                "selamat",
+                "pagi",
+                "ima",
+                "kasih",
+                "makasih",
+                "ya",
+                "sampa",
+                "jumpa",
+                "dadah",
+                "apa",
+                "itu",
+                "dana",
+                "darurat",
+                "jelas",
+                "tentang",
+                "yang",
+                "ideal",
+                "bagaimana",
+                "cara",
+                "investasi",
+                "untuk",
+                "pula",
+                "atasi",
+                "utang",
+                "produktif",
+                "elola",
+                "cicil",
+                "buat",
+                "anggar",
+                "20",
+                "30",
+                "50",
+                "tode",
+                "hemat"
+              ],
+              "intents": [
+                "greetings.hello",
+                "greetings.thanks",
+                "greetings.bye",
+                "about.emergency_fund",
+                "about.investment",
+                "about.debt",
+                "about.budget"
+              ],
+              "perceptrons": [
+                [
+                  9.892117500305176,
+                  9.890450477600098,
+                  5.102649688720703,
+                  5.102649688720703,
+                  -2.037879705429077,
+                  -2.037879705429077,
+                  -2.036115884780884,
+                  -2.036115884780884,
+                  -2.0342025756835938,
+                  -2.0342025756835938,
+                  -3.761946678161621,
+                  -1.4118096828460693,
+                  -1.088181972503662,
+                  -1.0099031925201416,
+                  -1.0099031925201416,
+                  -1.0440888404846191,
+                  -1.0440888404846191,
+                  -0.32297056913375854,
+                  -0.32297056913375854,
+                  -1.7163892984390259,
+                  -2.200272798538208,
+                  -1.9790667295455933,
+                  -1.046639084815979,
+                  -1.046639084815979,
+                  -0.7243995070457458,
+                  -1.150229811668396,
+                  -0.42502716183662415,
+                  -1.1727994680404663,
+                  -1.1727994680404663,
+                  -0.930966317653656,
+                  -0.930966317653656,
+                  -0.3934905230998993,
+                  -0.3934905230998993,
+                  -0.3934905230998993,
+                  -0.3934905230998993,
+                  -0.2311706840991974,
+                  4.076206006527246
+                ],
+                [
+                  -1.5341042280197144,
+                  -1.5227028131484985,
+                  -0.8237583637237549,
+                  -0.8237583637237549,
+                  6.349949836730957,
+                  6.349949836730957,
+                  6.34830904006958,
+                  6.34830904006958,
+                  -0.8923708200454712,
+                  -0.8923708200454712,
+                  -1.557088851928711,
+                  -0.6772747039794922,
+                  -0.5431140065193176,
+                  -0.5310738682746887,
+                  -0.5310738682746887,
+                  -0.4783773124217987,
+                  -0.4783773124217987,
+                  -0.11988556385040283,
+                  -0.11988556385040283,
+                  -0.8374111652374268,
+                  -1.066240906715393,
+                  -0.9388017654418945,
+                  -0.4609832167625427,
+                  -0.4609832167625427,
+                  -0.3297269344329834,
+                  -0.525426983833313,
+                  -0.17947691679000854,
+                  -0.49267351627349854,
+                  -0.49267351627349854,
+                  -0.38099879026412964,
+                  -0.38099879026412964,
+                  -0.16530001163482666,
+                  -0.16530001163482666,
+                  -0.16530001163482666,
+                  -0.16530001163482666,
+                  -0.12336664646863937,
+                  1.5665911204712089
+                ],
+                [
+                  -2.2864606380462646,
+                  -2.2642788887023926,
+                  -1.2161282300949097,
+                  -1.2161282300949097,
+                  -1.2148125171661377,
+                  -1.2148125171661377,
+                  -1.2133861780166626,
+                  -1.2133861780166626,
+                  5.928576946258545,
+                  5.928576946258545,
+                  11.370274543762207,
+                  -0.8529458045959473,
+                  -0.688467264175415,
+                  -0.6427937746047974,
+                  -0.6427937746047974,
+                  -0.6247114539146423,
+                  -0.6247114539146423,
+                  -0.16446182131767273,
+                  -0.16446182131767273,
+                  -1.0906845331192017,
+                  -1.379086971282959,
+                  -1.2175184488296509,
+                  -0.6248863339424133,
+                  -0.6248863339424133,
+                  -0.4284361004829407,
+                  -0.6791960597038269,
+                  -0.24657976627349854,
+                  -0.6880125999450684,
+                  -0.6880125999450684,
+                  -0.5437986254692078,
+                  -0.5437986254692078,
+                  -0.23146450519561768,
+                  -0.23146450519561768,
+                  -0.23146450519561768,
+                  -0.23146450519561768,
+                  -0.15576940774917603,
+                  2.4672907177717027
+                ],
+                [
+                  -0.21550583839416504,
+                  -0.20849040150642395,
+                  -0.15836076438426971,
+                  -0.15836076438426971,
+                  -0.15332862734794617,
+                  -0.15332862734794617,
+                  -0.1484459936618805,
+                  -0.1484459936618805,
+                  -0.1437089443206787,
+                  -0.1437089443206787,
+                  -0.18976233899593353,
+                  1.3123986721038818,
+                  0.8692913055419922,
+                  5.9891462326049805,
+                  5.9891462326049805,
+                  1.0698182582855225,
+                  1.0698182582855225,
+                  0.4437209367752075,
+                  0.4437209367752075,
+                  -0.34770408272743225,
+                  -0.466354638338089,
+                  -2.2291336059570312,
+                  -0.147012859582901,
+                  -0.147012859582901,
+                  -0.09103112667798996,
+                  -1.2277764081954956,
+                  -1.0843805074691772,
+                  -0.12136822938919067,
+                  -0.12136822938919067,
+                  -0.09977485984563828,
+                  -0.09977485984563828,
+                  -0.609894335269928,
+                  -0.609894335269928,
+                  -0.609894335269928,
+                  -0.609894335269928,
+                  -0.036963991820812225,
+                  0.12372632223623695
+                ],
+                [
+                  -0.4704262316226959,
+                  -0.4575187563896179,
+                  -0.3160333037376404,
+                  -0.3160333037376404,
+                  -0.3066304326057434,
+                  -0.3066304326057434,
+                  -0.3119198679924011,
+                  -0.3119198679924011,
+                  -0.3037929832935333,
+                  -0.3037929832935333,
+                  -0.4229148328304291,
+                  -0.42365050315856934,
+                  -0.4038350582122803,
+                  -1.8752721548080444,
+                  -1.8752721548080444,
+                  1.6674543619155884,
+                  1.6674543619155884,
+                  -0.009668692015111446,
+                  -0.009668692015111446,
+                  1.6918424367904663,
+                  1.2561545372009277,
+                  10.769047737121582,
+                  1.673871636390686,
+                  1.673871636390686,
+                  -0.6475843191146851,
+                  -0.8578686714172363,
+                  -0.1622098982334137,
+                  -0.9657599925994873,
+                  -0.9657599925994873,
+                  -0.7480458617210388,
+                  -0.7480458617210388,
+                  -0.1341067999601364,
+                  -0.1341067999601364,
+                  -0.1341067999601364,
+                  -0.1341067999601364,
+                  -2.958660364151001,
+                  0.23024810580957808
+                ],
+                [
+                  -0.8848714828491211,
+                  -0.8803484439849854,
+                  -0.49538248777389526,
+                  -0.49538248777389526,
+                  -0.49246081709861755,
+                  -0.49246081709861755,
+                  -0.48501473665237427,
+                  -0.48501473665237427,
+                  -0.48229312896728516,
+                  -0.48229312896728516,
+                  -0.8684964776039124,
+                  0.7700609564781189,
+                  0.9769466519355774,
+                  -1.5100246667861938,
+                  -1.5100246667861938,
+                  -0.09635250270366669,
+                  -0.09635250270366669,
+                  -0.1577817052602768,
+                  -0.1577817052602768,
+                  1.5161203145980835,
+                  -0.09982035309076309,
+                  -2.2729766368865967,
+                  -0.07758599519729614,
+                  -0.07758599519729614,
+                  5.097594738006592,
+                  8.379273414611816,
+                  3.2798635959625244,
+                  5.933706760406494,
+                  5.933706760406494,
+                  -0.7276575565338135,
+                  -0.7276575565338135,
+                  -0.9531628489494324,
+                  -0.9531628489494324,
+                  -0.9531628489494324,
+                  -0.9531628489494324,
+                  -2.3118104934692383,
+                  0.8859956922163885
+                ],
+                [
+                  -0.6021863222122192,
+                  -0.5869740843772888,
+                  -0.3982337713241577,
+                  -0.3982337713241577,
+                  -0.38643547892570496,
+                  -0.38643547892570496,
+                  -0.3932904005050659,
+                  -0.3932904005050659,
+                  -0.3830845057964325,
+                  -0.3830845057964325,
+                  -0.5485237836837769,
+                  0.8595494627952576,
+                  1.1102945804595947,
+                  -1.364550232887268,
+                  -1.364550232887268,
+                  -0.10459409654140472,
+                  -0.10459409654140472,
+                  -0.19109214842319489,
+                  -0.19109214842319489,
+                  1.1931568384170532,
+                  4.548523902893066,
+                  -5.919122695922852,
+                  -0.056301046162843704,
+                  -0.056301046162843704,
+                  -2.1096878051757812,
+                  -2.8955113887786865,
+                  -0.7303553223609924,
+                  -0.8231462836265564,
+                  -0.8231462836265564,
+                  4.643286228179932,
+                  4.643286228179932,
+                  2.962355375289917,
+                  2.962355375289917,
+                  2.962355375289917,
+                  2.962355375289917,
+                  7.8044209480285645,
+                  0.4798877999093156
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "id",
+        "halo"
+      ],
+      [
+        "id",
+        "hai"
+      ],
+      [
+        "id",
+        "selamat pagi"
+      ],
+      [
+        "id",
+        "terima kasih"
+      ],
+      [
+        "id",
+        "makasih ya"
+      ],
+      [
+        "id",
+        "sampai jumpa"
+      ],
+      [
+        "id",
+        "dadah"
+      ],
+      [
+        "id",
+        "apa itu dana darurat"
+      ],
+      [
+        "id",
+        "jelaskan tentang dana darurat"
+      ],
+      [
+        "id",
+        "berapa dana darurat yang ideal"
+      ],
+      [
+        "id",
+        "bagaimana cara investasi"
+      ],
+      [
+        "id",
+        "investasi untuk pemula"
+      ],
+      [
+        "id",
+        "jelaskan tentang investasi"
+      ],
+      [
+        "id",
+        "cara mengatasi utang"
+      ],
+      [
+        "id",
+        "apa itu utang produktif"
+      ],
+      [
+        "id",
+        "bagaimana mengelola cicilan"
+      ],
+      [
+        "id",
+        "cara membuat anggaran"
+      ],
+      [
+        "id",
+        "apa itu metode 50/30/20"
+      ],
+      [
+        "id",
+        "bagaimana cara menghemat"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "id": {
+        "greetings.hello": [
+          {
+            "answer": "Halo! Ada yang bisa saya bantu seputar keuangan?"
+          }
+        ],
+        "greetings.thanks": [
+          {
+            "answer": "Sama-sama! Senang bisa membantu Anda."
+          }
+        ],
+        "greetings.bye": [
+          {
+            "answer": "Sampai jumpa lagi!"
+          }
+        ],
+        "about.emergency_fund": [
+          {
+            "answer": "Dana darurat adalah dana simpanan khusus untuk kondisi tak terduga. Idealnya, Anda punya 3-6 kali pengeluaran bulanan. Mulailah menyisihkan sedikit demi sedikit ke rekening terpisah."
+          }
+        ],
+        "about.investment": [
+          {
+            "answer": "Investasi adalah cara menumbuhkan uang. Untuk pemula, Reksadana bisa jadi pilihan bagus karena risikonya lebih terkendali. Pastikan cash flow Anda sudah positif sebelum berinvestasi ya."
+          }
+        ],
+        "about.debt": [
+          {
+            "answer": "Jika Anda punya utang, fokuslah untuk melunasi yang bunganya paling tinggi terlebih dahulu. Hindari menambah utang konsumtif baru sampai kondisi keuangan stabil."
+          }
+        ],
+        "about.budget": [
+          {
+            "answer": "Anggaran adalah kunci mengontrol keuangan. Coba metode 50/30/20: 50% pendapatan untuk kebutuhan, 30% untuk keinginan, dan 20% untuk tabungan/utang."
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}
