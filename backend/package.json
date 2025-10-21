@@ -1,0 +1,16 @@
+{
+  "name": "pengsijehtra-backend",
+  "version": "1.0.0",
+  "description": "Backend for PengSijehtra financial analysis app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "CIVET 2.0",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "node-nlp": "^5.0.0-alpha.5"
+  }
+}
